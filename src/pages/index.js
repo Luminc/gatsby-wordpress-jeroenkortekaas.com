@@ -10,11 +10,19 @@ const IndexPage = ({ data }) => (
 
     <ul style={{ listStyle: "none" }}>
       {data.allWordpressWpProjects.edges.map(post => (
-        <li style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}>
+        <li
+          key={post.node.wordpress_id}
+          style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}
+        >
           <Link
             to={`/post/${post.node.slug}`}
             style={{ display: "flex", color: "black", textDecoration: "none" }}
           >
+            <Img
+              sizes={post.node.featured_media.localFile.childImageSharp.sizes}
+              alt={post.node.title}
+              style={{ width: "25%", marginRight: 20 }}
+            />
             <div style={{ width: "75%" }}>
               <h3
                 dangerouslySetInnerHTML={{ __html: post.node.title }}
@@ -38,8 +46,22 @@ export const query = graphql`
         node {
           wordpress_id
           title
-          excerpt
           slug
+          content
+          featured_media {
+            localFile {
+              childImageSharp {
+                sizes(maxWidth: 600) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+          acf {
+            materials
+            medium
+            year
+          }
         }
       }
     }

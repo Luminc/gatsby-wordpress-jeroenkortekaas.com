@@ -54,6 +54,8 @@ module.exports = {
           "**/taxonomies",
           "**/users",
           "**/projects",
+          "**/*/*/menus",
+          "**/*/*/menu-locations",
         ],
         excludedRoutes: [],
         normalizer: function ({ entities }) {

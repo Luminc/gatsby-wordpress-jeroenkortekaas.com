@@ -22,6 +22,15 @@ export default BlogPostTemplate
 export const query = graphql`
   query($id: Int!) {
     wordpressWpProjects(wordpress_id: { eq: $id }) {
+      featured_media {
+        localFile {
+          childImageSharp {
+            sizes {
+              src
+            }
+          }
+        }
+      }
       title
       content
     }
