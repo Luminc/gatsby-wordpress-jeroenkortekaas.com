@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Jeroen Kortekaas`,
+    description: `Jeroen Kortekaas creates sculptural collage and images dealing with motifs of animation and transportation.`,
+    author: `@luminc`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
