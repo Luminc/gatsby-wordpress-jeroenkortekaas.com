@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const IndexPage = ({ data }) => (
-  <Layout>
+  <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
     <ul style={{ listStyle: "none" }}>
@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => (
         </li>
       ))}
     </ul>
-  </Layout>
+  </>
 )
 
 export default IndexPage

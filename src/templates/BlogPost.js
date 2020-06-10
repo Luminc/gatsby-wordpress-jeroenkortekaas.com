@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogPostTemplate = ({ data }) => (
-  <Layout>
+  <>
     <SEO
       title={data.wordpressWpProjects.title}
       description={data.wordpressWpProjects.excerpt}
@@ -15,7 +15,7 @@ const BlogPostTemplate = ({ data }) => (
       style={{ marginTop: 20 }}
       dangerouslySetInnerHTML={{ __html: data.wordpressWpProjects.content }}
     />
-  </Layout>
+  </>
 )
 export default BlogPostTemplate
 
