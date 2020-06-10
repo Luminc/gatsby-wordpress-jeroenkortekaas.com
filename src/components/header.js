@@ -1,6 +1,7 @@
 import { Link, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Logo from "../common/Logo"
 
 const Header = () => (
   <StaticQuery
@@ -20,7 +21,6 @@ const Header = () => (
     render={data => (
       <header
         style={{
-          background: `rebeccapurple`,
           marginBottom: `1.45rem`,
         }}
       >
@@ -42,7 +42,7 @@ const Header = () => (
                 textDecoration: `none`,
               }}
             >
-              {data.wordpressSiteMetadata.name}
+              <Logo />
             </Link>
           </h1>
           <ul style={{ listStyle: `none`, display: `flex`, margin: 0 }}>
