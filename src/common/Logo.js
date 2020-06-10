@@ -1,7 +1,7 @@
-import React from "react";
-import Lottie from "lottie-react-web";
+import React from "react"
+import Lottie from "lottie-react-web"
 // import animation from "./oscillator.json";
-import animation from "./esperanzadevries.json";
+import animation from "./esperanzadevries.json"
 
 const Logo = () => (
   <Lottie
@@ -9,6 +9,6 @@ const Logo = () => (
     options={{ animationData: animation, loop: false }}
     alt="Loading ..."
   />
-);
+)
 
-export default Logo;
+export default Logo
