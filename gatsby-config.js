@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Jeroen Kortekaas`,
-    description: `Jeroen Kortekaas creates sculptural collage and images dealing with motifs of animation and transportation.`,
+    title: `Esperanza de Vries`,
+    description: `Esperanza de Vries is an artist primarily working with textile and tactile sculpture.`,
     author: `@luminc`,
-    siteUrl: `https://www.jeroenkortekaas.com/`,
+    siteUrl: `https://www.esperanzadevries.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
