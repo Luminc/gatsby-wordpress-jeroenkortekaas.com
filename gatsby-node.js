@@ -9,7 +9,7 @@ const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
-  const BlogPostTemplate = path.resolve("./src/templates/BlogPost.js")
+  const ProjectPageTemplate = path.resolve("./src/templates/ProjectPage.js")
   const PageTemplate = path.resolve("./src/templates/PageTemplate.js")
 
   const result = await graphql(`
@@ -38,11 +38,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const BlogPosts = result.data.allWordpressWpProjects.edges
-  BlogPosts.forEach(post => {
+  const ProjectPages = result.data.allWordpressWpProjects.edges
+  ProjectPages.forEach(post => {
     createPage({
       path: `/post/${post.node.slug}`,
-      component: BlogPostTemplate,
+      component: ProjectPageTemplate,
       context: {
         id: post.node.wordpress_id,
       },

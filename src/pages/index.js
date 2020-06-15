@@ -7,32 +7,47 @@ const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
-    <ul style={{ listStyle: "none" }}>
+    <div className="card-columns">
       {data.allWordpressWpProjects.edges.map(post => (
-        <li
-          key={post.node.wordpress_id}
-          style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}
-        >
-          <Link
-            to={`/post/${post.node.slug}`}
-            style={{ display: "flex", color: "black", textDecoration: "none" }}
-          >
+        <Link to={`/post/${post.node.slug}`} key={post.node.wordpress_id}>
+          <div className="card">
             <Img
+              className="card-img"
               sizes={post.node.featured_media.localFile.childImageSharp.sizes}
               alt={post.node.title}
-              style={{ width: "25%", marginRight: 20 }}
             />
-            <div style={{ width: "75%" }}>
-              <h3
-                dangerouslySetInnerHTML={{ __html: post.node.title }}
-                style={{ marginBottom: 0 }}
-              />
-              <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+            <div className="card-body">
+              <p className="overline">
+                {post.node.acf.medium} — {post.node.acf.year}
+              </p>
+              <h5 className="card-title">{post.node.title}</h5>
             </div>
-          </Link>
-        </li>
+          </div>
+        </Link>
+        // <li
+
+        //   style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}
+        // >
+        //   <Link
+        //     to={`/post/${post.node.slug}`}
+        //     style={{ display: "flex", color: "black", textDecoration: "none" }}
+        //   >
+        //     <Img
+        //       sizes={post.node.featured_media.localFile.childImageSharp.sizes}
+        //       alt={post.node.title}
+        //       style={{ width: "25%", marginRight: 20 }}
+        //     />
+        //     <div style={{ width: "75%" }}>
+        //       <h3
+        //         dangerouslySetInnerHTML={{ __html: post.node.title }}
+        //         style={{ marginBottom: 0 }}
+        //       />
+        //       <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
+        //     </div>
+        //   </Link>
+        // </li>
       ))}
-    </ul>
+    </div>
   </>
 )
 

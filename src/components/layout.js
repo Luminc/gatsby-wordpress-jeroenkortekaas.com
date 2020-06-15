@@ -12,7 +12,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Header from "./header"
 import Socials from "./Socials"
 
-import "./layout.css"
+import "./bootstrap.min.css"
 import "./App.css"
 // FONTAWESOME
 import { library } from "@fortawesome/fontawesome-svg-core"

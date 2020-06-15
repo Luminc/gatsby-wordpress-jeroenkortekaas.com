@@ -193,7 +193,7 @@ nav {
 }
 
 .card-body a {
-  color: var(--primary-dark);
+  color: var(--primary-dark) !important;
 }
 
 .card-body:hover a {
