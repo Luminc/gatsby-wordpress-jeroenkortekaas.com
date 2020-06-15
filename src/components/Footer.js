@@ -13,20 +13,26 @@ const Footer = () => {
       </a>
       <div className="mt-2 social">
         <a
-          href="https://www.instagram.com/vrievries/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="light text-decoration-none p-2"
-        >
-          <FontAwesomeIcon icon={["fab", "facebook"]} />
-        </a>
-        <a
           href="https://www.facebook.com/zwadderich"
           target="_blank"
           rel="noopener noreferrer"
           className="light text-decoration-none p-2"
         >
-          <FontAwesomeIcon icon={["fab", "instagram"]} />
+          <FontAwesomeIcon
+            icon={["fab", "facebook"]}
+            style={{ fontSize: "1.2rem" }}
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/vrievries/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="light text-decoration-none p-2"
+        >
+          <FontAwesomeIcon
+            icon={["fab", "instagram"]}
+            style={{ fontSize: "1.2rem" }}
+          />
         </a>
         <a
           href="mailto:studio@esperanzadevries.com"
@@ -34,7 +40,10 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="light text-decoration-none p-2"
         >
-          <FontAwesomeIcon icon={["fas", "broom"]} />
+          <FontAwesomeIcon
+            icon={["fas", "broom"]}
+            style={{ fontSize: "1.2rem" }}
+          />
         </a>
       </div>
       <div className="copyright">

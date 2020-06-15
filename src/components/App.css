@@ -87,6 +87,17 @@ nav {
   height: 200px;
 }
 
+ul a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+}
+
+ul a:hover {
+  color: var(--primary-hover);
+  text-decoration: none;
+}
+
 .nav-links {
   display: flex;
   justify-content: space-between;

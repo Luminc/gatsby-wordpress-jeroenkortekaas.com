@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const ProjectPages = result.data.allWordpressWpProjects.edges
   ProjectPages.forEach(post => {
     createPage({
-      path: `/post/${post.node.slug}`,
+      path: `/project/${post.node.slug}`,
       component: ProjectPageTemplate,
       context: {
         id: post.node.wordpress_id,

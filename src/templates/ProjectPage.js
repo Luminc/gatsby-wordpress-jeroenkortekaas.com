@@ -8,7 +8,12 @@ const ProjectPageTemplate = ({ data }) => (
       title={data.wordpressWpProjects.title}
       description={data.wordpressWpProjects.excerpt}
     />
+
     <h1 className="text-center">{data.wordpressWpProjects.title}</h1>
+    <p className="overline text-center">
+      {data.wordpressWpProjects.acf.year} &mdash;{" "}
+      {data.wordpressWpProjects.acf.medium}
+    </p>
     {data.wordpressWpProjects.acf.materials ? (
       <p className="text-center">{data.wordpressWpProjects.acf.materials}</p>
     ) : null}
@@ -36,6 +41,8 @@ export const query = graphql`
       content
       acf {
         materials
+        year
+        medium
       }
     }
   }

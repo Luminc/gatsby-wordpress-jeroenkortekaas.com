@@ -7,22 +7,30 @@ const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="card-columns">
-      {data.allWordpressWpProjects.edges.map(post => (
+      {data.allWordpressWpProjects.edges.map(project => (
         <div className="card">
-          <Link to={`/post/${post.node.slug}`} key={post.node.wordpress_id}>
+          <Link
+            to={`/project/${project.node.slug}`}
+            key={project.node.wordpress_id}
+          >
             <Img
               className="card-img"
-              sizes={post.node.featured_media.localFile.childImageSharp.sizes}
-              alt={post.node.title}
+              sizes={
+                project.node.featured_media.localFile.childImageSharp.sizes
+              }
+              alt={project.node.title}
             />
           </Link>
 
           <div className="card-body">
-            <Link to={`/post/${post.node.slug}`} key={post.node.wordpress_id}>
+            <Link
+              to={`/project/${project.node.slug}`}
+              key={project.node.wordpress_id}
+            >
               <p className="overline">
-                {post.node.acf.medium} — {post.node.acf.year}
+                {project.node.acf.medium} — {project.node.acf.year}
               </p>
-              <h5 className="card-title">{post.node.title}</h5>
+              <h5 className="card-title">{project.node.title}</h5>
             </Link>
           </div>
         </div>

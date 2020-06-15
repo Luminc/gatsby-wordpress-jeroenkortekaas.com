@@ -33,7 +33,7 @@ const Header = () => (
 
           <ul
             style={{ listStyle: `none`, display: `flex`, margin: 0 }}
-            className="list-unstyled d-flex nav-links"
+            className="list-unstyled"
           >
             <Link to={`/`} className="mx-2">
               Works
@@ -44,7 +44,6 @@ const Header = () => (
               </li>
             ))}
           </ul>
-          <Burger />
         </div>
       </header>
     )}
