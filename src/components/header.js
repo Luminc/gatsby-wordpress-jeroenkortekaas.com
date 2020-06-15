@@ -25,7 +25,7 @@ const Header = () => (
           marginBottom: `1.45rem`,
         }}
       >
-        <div
+        {/* <div
           style={{
             margin: `0 auto`,
             maxWidth: 960,
@@ -34,19 +34,16 @@ const Header = () => (
             justifyContent: `space-between`,
             alignItems: `center`,
           }}
-        >
-          <h1 style={{ margin: 0 }}>
-            <Link
-              to="/"
-              style={{
-                color: `white`,
-                textDecoration: `none`,
-              }}
-            >
-              <Logo />
-            </Link>
-          </h1>
+        > */}
+        <div className="container-fluid d-flex justify-content-between align-items-center">
+          <Link to="/">
+            <Logo />
+          </Link>
+
           <ul style={{ listStyle: `none`, display: `flex`, margin: 0 }}>
+            <Link to={`/`} className="mx-2">
+              Works
+            </Link>
             {data.wordpressWpApiMenusMenusItems.items.map(item => (
               <li key={item.object_slug} style={{ margin: `0 10px` }}>
                 <Link

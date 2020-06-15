@@ -6,24 +6,27 @@ import SEO from "../components/seo"
 const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-
     <div className="card-columns">
       {data.allWordpressWpProjects.edges.map(post => (
-        <Link to={`/post/${post.node.slug}`} key={post.node.wordpress_id}>
-          <div className="card">
+        <div className="card">
+          <Link to={`/post/${post.node.slug}`} key={post.node.wordpress_id}>
             <Img
               className="card-img"
               sizes={post.node.featured_media.localFile.childImageSharp.sizes}
               alt={post.node.title}
             />
-            <div className="card-body">
+          </Link>
+
+          <div className="card-body">
+            <Link to={`/post/${post.node.slug}`} key={post.node.wordpress_id}>
               <p className="overline">
                 {post.node.acf.medium} — {post.node.acf.year}
               </p>
               <h5 className="card-title">{post.node.title}</h5>
-            </div>
+            </Link>
           </div>
-        </Link>
+        </div>
+
         // <li
 
         //   style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}
