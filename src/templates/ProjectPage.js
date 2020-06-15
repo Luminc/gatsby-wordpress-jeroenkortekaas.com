@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import SEO from "../components/seo"
 
 const ProjectPageTemplate = ({ data }) => (
@@ -8,10 +8,12 @@ const ProjectPageTemplate = ({ data }) => (
       title={data.wordpressWpProjects.title}
       description={data.wordpressWpProjects.excerpt}
     />
-    <Link to="/">Back</Link>
-    <h1>{data.wordpressWpProjects.title}</h1>
+    <h1 className="text-center">{data.wordpressWpProjects.title}</h1>
+    {data.wordpressWpProjects.acf.materials ? (
+      <p className="text-center">{data.wordpressWpProjects.acf.materials}</p>
+    ) : null}
     <div
-      style={{ marginTop: 20 }}
+      className="mt-5 text-justify mx-auto"
       dangerouslySetInnerHTML={{ __html: data.wordpressWpProjects.content }}
     />
   </>
@@ -32,6 +34,9 @@ export const query = graphql`
       }
       title
       content
+      acf {
+        materials
+      }
     }
   }
 `

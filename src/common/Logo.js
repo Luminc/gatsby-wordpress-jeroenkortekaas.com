@@ -1,7 +1,7 @@
 import React from "react"
 import Lottie from "lottie-react-web"
 // import animation from "./oscillator.json";
-import animation from "./esperanzadevries.json"
+import animation from "./Logo.json"
 
 const Logo = () => (
   <Lottie

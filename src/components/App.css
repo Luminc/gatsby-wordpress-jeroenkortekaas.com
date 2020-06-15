@@ -324,8 +324,6 @@ h5.card-title {
   .nav-links a {
     color: var(--primary-dark);
     text-decoration: none;
-    padding: 5px;
-    padding-left: 30px;
     font: normal 300 1.5rem var(--font);
     letter-spacing: 0.1rem;
     text-transform: none;
