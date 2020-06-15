@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout.js"
 import SEO from "../components/seo"
 
 const PageTemplate = ({ data }) => (
