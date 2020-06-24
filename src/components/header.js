@@ -2,7 +2,6 @@ import { Link, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Logo from "../common/Logo"
-import Burger from "./Burger"
 import { graphql } from "gatsby"
 
 const Header = () => (
