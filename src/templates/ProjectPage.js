@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import TransitionLink from "gatsby-plugin-transition-link"
 import SEO from "../components/seo"
 
 const ProjectPageTemplate = ({ data, pageContext }) => {
@@ -25,15 +24,21 @@ const ProjectPageTemplate = ({ data, pageContext }) => {
       />
       <div className="contextual-buttons d-flex justify-content-between">
         {prev ? (
-          <TransitionLink to={`/project/${prev.slug}`}>
+          <Link to={`/project/${prev.slug}`}>
+            <span className="mr-3 text-decoration-none">&lt;</span>
             {prev.title}
-          </TransitionLink>
-        ) : null}
+          </Link>
+        ) : (
+          <p className="text-mute">&lt;</p>
+        )}
         {next ? (
-          <TransitionLink to={`/project/${next.slug}`}>
+          <Link to={`/project/${next.slug}`}>
             {next.title}
-          </TransitionLink>
-        ) : null}
+            <span className="ml-3 text-decoration-none">&gt;</span>
+          </Link>
+        ) : (
+          <span className="text-muted">&gt;</span>
+        )}
       </div>
     </>
   )
