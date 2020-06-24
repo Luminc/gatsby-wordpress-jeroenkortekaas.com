@@ -1,28 +1,43 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
+import TransitionLink from "gatsby-plugin-transition-link"
 import SEO from "../components/seo"
 
-const ProjectPageTemplate = ({ data }) => (
-  <>
-    <SEO
-      title={data.wordpressWpProjects.title}
-      description={data.wordpressWpProjects.excerpt}
-    />
+const ProjectPageTemplate = ({ data, pageContext }) => {
+  const { wordpressWpProjects } = data
+  const title = wordpressWpProjects.title
+  const { next } = pageContext
+  const { prev } = pageContext
+  return (
+    <>
+      <SEO title={title} description={wordpressWpProjects.excerpt} />
 
-    <h1 className="text-center">{data.wordpressWpProjects.title}</h1>
-    <p className="overline text-center">
-      {data.wordpressWpProjects.acf.year} &mdash;{" "}
-      {data.wordpressWpProjects.acf.medium}
-    </p>
-    {data.wordpressWpProjects.acf.materials ? (
-      <p className="text-center">{data.wordpressWpProjects.acf.materials}</p>
-    ) : null}
-    <div
-      className="mt-5 text-justify mx-auto"
-      dangerouslySetInnerHTML={{ __html: data.wordpressWpProjects.content }}
-    />
-  </>
-)
+      <h1 className="text-center">{wordpressWpProjects.title}</h1>
+      <p className="overline text-center">
+        {wordpressWpProjects.acf.year} &mdash; {wordpressWpProjects.acf.medium}
+      </p>
+      {wordpressWpProjects.acf.materials ? (
+        <p className="text-center">{wordpressWpProjects.acf.materials}</p>
+      ) : null}
+      <div
+        className="mt-5 text-justify mx-auto"
+        dangerouslySetInnerHTML={{ __html: wordpressWpProjects.content }}
+      />
+      <div className="contextual-buttons d-flex justify-content-between">
+        {prev ? (
+          <TransitionLink to={`/project/${prev.slug}`}>
+            {prev.title}
+          </TransitionLink>
+        ) : null}
+        {next ? (
+          <TransitionLink to={`/project/${next.slug}`}>
+            {next.title}
+          </TransitionLink>
+        ) : null}
+      </div>
+    </>
+  )
+}
 export default ProjectPageTemplate
 
 export const query = graphql`

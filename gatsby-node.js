@@ -19,6 +19,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           node {
             wordpress_id
             slug
+            title
           }
         }
       }
@@ -39,12 +40,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   const ProjectPages = result.data.allWordpressWpProjects.edges
-  ProjectPages.forEach(post => {
+  ProjectPages.forEach(({ node }, index) => {
     createPage({
-      path: `/project/${post.node.slug}`,
+      path: `/project/${node.slug}`,
       component: ProjectPageTemplate,
       context: {
-        id: post.node.wordpress_id,
+        id: node.wordpress_id,
+        prev: index === 0 ? null : ProjectPages[index - 1].node,
+        next:
+          index === ProjectPages.length - 1
+            ? null
+            : ProjectPages[index + 1].node,
       },
     })
   })
