@@ -8,10 +8,10 @@
   --color: rgb(255, 255, 255);
   --font: "Poppins", sans-serif;
   --hover: rgba(255, 255, 255, 0.5);
-  --primary-dark: #390f1a;
-  --primary-bg: #e2d6e1;
-  --primary-hover: #9d4e63;
-  --primary-light: rgba(57, 15, 26, 0.7);
+  --primary-dark: #000000;
+  --primary-bg: #ffffff;
+  --primary-hover: rgba(0, 0, 0, 0.7);
+  --primary-light: rgba(0, 0, 0, 0.7);
 }
 
 html {
