@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Esperanza de Vries`,
-    description: `Esperanza de Vries is an artist primarily working with textile and tactile sculpture.`,
+    title: `Jeroen Kortekaas`,
+    description: `Jeroen Kortekaas is an interdisciplinary artist working with sculptures and images.`,
     author: `@luminc`,
-    siteUrl: `https://www.esperanzadevries.com/`,
+    siteUrl: `https://www.jeroenkortekaas.com/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: "gatsby-source-wordpress",
       options: {
-        baseUrl: "wp.esperanzadevries.com",
+        baseUrl: "wp.jeroenkortekaas.com",
         protocol: "https",
         hostingWPCOM: false,
         useACF: true,
@@ -45,7 +45,7 @@ module.exports = {
         verboseOutput: false,
         perPage: 100,
         searchAndReplaceContentUrls: {
-          sourceUrl: "https://www.wp.esperanzadevries.com",
+          sourceUrl: "https://www.wp.jeroenkortekaas.com",
           replacementUrl: "https://localhost:8000",
         },
         // Set how many simultaneous requests are sent at once.
