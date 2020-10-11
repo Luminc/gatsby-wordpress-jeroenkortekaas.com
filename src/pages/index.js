@@ -34,29 +34,6 @@ const IndexPage = ({ data }) => (
             </Link>
           </div>
         </div>
-
-        // <li
-
-        //   style={{ padding: "20px 0", borderBottom: "1px solid #ccc" }}
-        // >
-        //   <Link
-        //     to={`/post/${post.node.slug}`}
-        //     style={{ display: "flex", color: "black", textDecoration: "none" }}
-        //   >
-        //     <Img
-        //       sizes={post.node.featured_media.localFile.childImageSharp.sizes}
-        //       alt={post.node.title}
-        //       style={{ width: "25%", marginRight: 20 }}
-        //     />
-        //     <div style={{ width: "75%" }}>
-        //       <h3
-        //         dangerouslySetInnerHTML={{ __html: post.node.title }}
-        //         style={{ marginBottom: 0 }}
-        //       />
-        //       <div dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-        //     </div>
-        //   </Link>
-        // </li>
       ))}
     </div>
   </>
@@ -76,7 +53,7 @@ export const query = graphql`
           featured_media {
             localFile {
               childImageSharp {
-                sizes(maxWidth: 600) {
+                sizes(maxWidth: 900) {
                   ...GatsbyImageSharpSizes
                 }
               }

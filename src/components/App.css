@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Commissioner&display=swap");
 
 * {
   margin: 0px;
@@ -6,7 +6,7 @@
   box-sizing: border-box;
   --bg: transparent;
   --color: rgb(255, 255, 255);
-  --font: "Poppins", sans-serif;
+  --font: "Commissioner", sans-serif;
   --hover: rgba(255, 255, 255, 0.5);
   --primary-dark: #000000;
   --primary-bg: #ffffff;
@@ -60,7 +60,7 @@ h1 {
 }
 
 .container {
-  max-width: 768px;
+  max-width: 1200px;
 }
 
 .hero {
@@ -101,7 +101,6 @@ nav {
 
 ul a {
   text-decoration: none;
-  text-transform: uppercase;
   color: var(--primary-dark);
 }
 
@@ -371,12 +370,6 @@ h5.card-title {
     text-transform: uppercase;
   }
 
-  .card-columns {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-  }
-
   .lead {
     font-size: 1rem;
   }
@@ -402,19 +395,36 @@ h5.card-title {
     -moz-column-count: 1;
     column-count: 1;
   }
+
+  .card-columns .card {
+    margin-bottom: 1rem;
+  }
 }
 
 /* MD */
-@media screen and (max-width: 768px) {
-}
+@media screen and (min-width: 576px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    column-gap: 3rem;
+  }
 
+  .card-columns .card {
+    margin-bottom: 5rem;
+  }
+}
 /* LG */
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
+  .card-columns {
+    column-gap: 10rem;
+  }
 }
 
 /* XL */
 @media screen and (max-width: 1200px) {
 }
+
 .nav-active {
   transform: translateX(0%);
 }

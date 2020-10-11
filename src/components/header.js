@@ -1,8 +1,8 @@
 import { Link, StaticQuery } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import Logo from "../common/Logo"
 import { graphql } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 const Header = () => (
   <StaticQuery
@@ -26,10 +26,9 @@ const Header = () => (
         }}
       >
         <div className="container-fluid d-flex justify-content-between align-items-center">
-          <Link to="/">
-            <Logo />
+          <Link to="/" className="mx-2">
+            Jeroen Kortekaas
           </Link>
-
           <ul
             style={{ listStyle: `none`, display: `flex`, margin: 0 }}
             className="list-unstyled"
