@@ -10,7 +10,7 @@ const ProjectPageTemplate = ({ data, pageContext }) => {
   return (
     <>
       <SEO title={title} description={wordpressWpProjects.excerpt} />
-
+      <div className="container">
       <h1 className="text-center">{wordpressWpProjects.title}</h1>
       <p className="overline text-center">
         {wordpressWpProjects.acf.year} &mdash; {wordpressWpProjects.acf.medium}
@@ -39,6 +39,7 @@ const ProjectPageTemplate = ({ data, pageContext }) => {
         ) : (
           <span className="text-muted">&gt;</span>
         )}
+      </div>
       </div>
     </>
   )

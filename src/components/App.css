@@ -13,9 +13,23 @@
   --primary-hover: rgba(0, 0, 0, 0.7);
   --primary-light: rgba(0, 0, 0, 0.7);
 }
-
+header div {
+  height: 2rem;
+}
 html {
   font-size: 16px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+main p.has-text-align-left {
+  max-width: 740px;
+  margin: 0 auto;
 }
 
 a {
@@ -51,12 +65,6 @@ body {
   overflow-x: hidden;
   color: var(--primary-dark);
   background-color: var(--primary-bg);
-}
-
-h1 {
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.2;
 }
 
 .container {

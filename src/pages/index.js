@@ -2,10 +2,44 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
+import {Carousel} from 'react-bootstrap'
 
 const IndexPage = ({ data }) => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`Jeroen Kortekaas`, `Artist`, `Sculpture`]} />
+
+    <Carousel pause="false" indicators="false">
+    {data.allWordpressWpShowcase.edges.map(work => (
+        <Carousel.Item>
+          <Link 
+          to={`/project/${work.node.acf.link_slug}`}
+          >
+            <Img
+              className="d-block w-100"
+              sizes={
+                work.node.featured_media.localFile.childImageSharp.sizes
+              }
+              alt={work.node.title}
+            />
+            </Link>
+        </Carousel.Item>
+      ))}
+    </Carousel>
+    <div className="container">
+    <div className="card-columns">
+      {data.allWordpressWpShowcase.edges.map(work => (
+        <div className="card">
+            <Img
+              className="card-img"
+              sizes={
+                work.node.featured_media.localFile.childImageSharp.sizes
+              }
+              alt={work.node.title}
+            />
+        </div>
+      ))}
+    </div>
+    <h1>Projects</h1>
     <div className="card-columns">
       {data.allWordpressWpProjects.edges.map(project => (
         <div className="card">
@@ -36,6 +70,7 @@ const IndexPage = ({ data }) => (
         </div>
       ))}
     </div>
+    </div>
   </>
 )
 
@@ -43,6 +78,24 @@ export default IndexPage
 
 export const query = graphql`
   query MyQuery {
+    allWordpressWpShowcase {
+      edges {
+        node {
+          featured_media {
+            localFile {
+              childImageSharp {
+                sizes(maxWidth: 2500){
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
+          }
+          acf {
+            link_slug
+          }
+        }
+      }
+    }
     allWordpressWpProjects {
       edges {
         node {

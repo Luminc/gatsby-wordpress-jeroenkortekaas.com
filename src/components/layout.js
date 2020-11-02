@@ -8,12 +8,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Header from "./header"
 import Footer from "./Footer"
 
 import "./layout.css"
-import "./bootstrap.min.css"
 import "./App.css"
 
 // FONTAWESOME
@@ -37,10 +37,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div className="container">
         <main>{children}</main>
         <Footer />
-      </div>
     </>
   )
 }
