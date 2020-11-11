@@ -8,7 +8,7 @@ const IndexPage = ({ data }) => (
   <>
     <SEO title="Home" keywords={[`Jeroen Kortekaas`, `Artist`, `Sculpture`]} />
 
-    <Carousel pause="false" indicators="false">
+    <Carousel pause={false} indicators={false} className="mb-5">
     {data.allWordpressWpShowcase.edges.map(work => (
         <Carousel.Item>
           <Link 
@@ -26,19 +26,6 @@ const IndexPage = ({ data }) => (
       ))}
     </Carousel>
     <div className="container">
-    <div className="card-columns">
-      {data.allWordpressWpShowcase.edges.map(work => (
-        <div className="card">
-            <Img
-              className="card-img"
-              sizes={
-                work.node.featured_media.localFile.childImageSharp.sizes
-              }
-              alt={work.node.title}
-            />
-        </div>
-      ))}
-    </div>
     <h1>Projects</h1>
     <div className="card-columns">
       {data.allWordpressWpProjects.edges.map(project => (
