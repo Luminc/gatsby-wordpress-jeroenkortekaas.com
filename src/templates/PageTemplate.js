@@ -8,8 +8,10 @@ const PageTemplate = ({ data }) => (
       title={data.wordpressPage.title}
       description={data.wordpressPage.excerpt}
     />
-    <h1>{data.wordpressPage.title}</h1>
+    <div className="container">
+    <h1 className="text-center">{data.wordpressPage.title}</h1>
     <div dangerouslySetInnerHTML={{ __html: data.wordpressPage.content }} />
+    </div>
   </>
 )
 export default PageTemplate

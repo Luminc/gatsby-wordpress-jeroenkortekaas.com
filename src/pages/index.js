@@ -2,12 +2,12 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
-import {Carousel} from 'react-bootstrap'
+import {Carousel, Container,Col, Row} from 'react-bootstrap'
 
 const IndexPage = ({ data }) => (
-  <>
+  <div>
     <SEO title="Home" keywords={[`Jeroen Kortekaas`, `Artist`, `Sculpture`]} />
-
+    <Container fluid>
     <Carousel pause={false} indicators={false} className="mb-5">
     {data.allWordpressWpShowcase.edges.map(work => (
         <Carousel.Item>
@@ -25,7 +25,8 @@ const IndexPage = ({ data }) => (
         </Carousel.Item>
       ))}
     </Carousel>
-    <div className="container">
+    </Container>
+    <Container>
     <h1>Projects</h1>
     <div className="card-columns">
       {data.allWordpressWpProjects.edges.map(project => (
@@ -57,8 +58,8 @@ const IndexPage = ({ data }) => (
         </div>
       ))}
     </div>
-    </div>
-  </>
+    </Container>
+  </div>
 )
 
 export default IndexPage

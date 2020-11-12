@@ -19,12 +19,8 @@ const Header = () => (
       }
     `}
     render={data => (
-      <header
-        style={{
-          marginBottom: `1.45rem`,
-        }}
-      >
-        <div className="container-fluid d-flex justify-content-between align-items-center">
+      <header>
+        <div className="container-fluid d-flex justify-content-between align-items-center" style={{height: `3rem`}}>
           <Link to="/" className="mx-2">
             Jeroen Kortekaas
           </Link>

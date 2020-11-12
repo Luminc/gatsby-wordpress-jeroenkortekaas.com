@@ -10,16 +10,23 @@
   --hover: rgba(255, 255, 255, 0.5);
   --primary-dark: #000000;
   --primary-bg: #ffffff;
-  --primary-hover: rgba(0, 0, 0, 0.7);
+  --primary-hover: rgb(231, 213, 44);
   --primary-light: rgba(0, 0, 0, 0.7);
 }
 header div {
   height: 2rem;
 }
 html {
-  font-size: 16px;
+  font-size: 18px;
+  min-height: 100%;
 }
 
+body {
+  padding: 0px;
+}
+.overline {
+  margin-bottom: 0;
+}
 h1 {
   font-size: 3.5rem;
   font-weight: 300;
@@ -29,7 +36,7 @@ h1 {
 
 main p.has-text-align-left {
   max-width: 740px;
-  margin: 0 auto;
+  margin: 1rem auto;
 }
 
 a {
@@ -78,6 +85,106 @@ body {
   padding-top: 1rem;
 }
 
+.hero-flight {
+  position: relative;
+  margin-top: 0vh;
+  width: 100%;
+  height: 300px;
+  background-image: url("../common/background.png");
+  animation: barberpole 15s linear infinite;
+  background-repeat: repeat;
+  background-size: 900px;
+  background-color: rgb(231, 213, 44);
+  margin-bottom: 0;
+}
+
+.red {
+  background-color: rgb(133, 13, 13);
+}
+
+.gray {
+  color: rgba(0, 0, 0, 0.575);
+}
+
+.gray:hover {
+  color: rgba(0, 0, 0, 0.377);
+}
+.col-10 {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+}
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
+  padding: 0 !important;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -282,7 +389,6 @@ h5.card-title {
   align-items: center;
   justify-content: flex-start;
   margin-top: 60px;
-  margin-bottom: 30px;
 }
 
 .footer-links {
@@ -305,10 +411,10 @@ h5.card-title {
   text-align: center;
 }
 
-.footer .copyright {
+.copyright {
   padding-top: 30px;
   font: normal 300 13px Arial;
-  color: var(--primary-light);
+  color: rgba(0, 0, 0, 0.575);
 }
 
 .btn-outline-dark {
@@ -469,6 +575,26 @@ h5.card-title {
     transform: translate(0, -0px);
   }
 }
+@keyframes barberpole {
+  0% {
+    background-position: 0 0;
+  }
+  /* translate to height of background image */
+  100% {
+    background-position: 900px 900px;
+  }
+}
+
+@-webkit-keyframes barberpole {
+  0% {
+    background-position: 0 0;
+  }
+  /* translate to height of background image */
+  100% {
+    background-position: 900px 900px;
+  }
+}
+
 .toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 5px);
   background-color: var(--primary-dark);
