@@ -20,8 +20,8 @@ const Header = () => (
     `}
     render={data => (
       <header>
-        <div className="container-fluid d-flex justify-content-between align-items-center" style={{height: `3rem`}}>
-          <Link to="/" className="mx-2">
+        <div className="container-fluid d-flex justify-content-between align-items-center" style={{height: `3rem`, zIndex: "10"}}>
+          <Link to="/" className="mx-2 logo">
             Jeroen Kortekaas
           </Link>
           <ul

@@ -4,12 +4,12 @@ import {Container, Col, Row} from 'react-bootstrap'
 
 const Footer = () => {
   return (
-    <Container fluid styles={{height: "500px"}}>
+    <Container fluid style={{marginTop: "3rem"}}>
       <Row>
-        <Col className="d-none d-sm-block" s={6} md={9}> 
+        <Col className="d-none d-md-block" s={5} md={6} xl={9}> 
         <div className="hero-flight"></div>
         </Col>
-        <Col className="footer">
+        <Col className="footer" style={{mingHeight: "300px"}}>
       <a
         href="mailto:studio@jeroenkortekaas.com"
         target="_top"

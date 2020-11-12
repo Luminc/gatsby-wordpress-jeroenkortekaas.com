@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Commissioner&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;600&display=swap");
 
 * {
   margin: 0px;
@@ -16,6 +16,7 @@
 header div {
   height: 2rem;
 }
+
 html {
   font-size: 18px;
   min-height: 100%;
@@ -201,13 +202,13 @@ nav {
 }
 
 .logo {
-  color: var(--color);
-  font-size: 1.5rem;
-  letter-spacing: 0.1rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  width: calc(100px + 5vw);
-  height: calc(100px+ 5vw);
+  font-size: 1.2rem;
+  font-family: var(--font);
+  font-weight: 400;
+}
+
+.logo:hover {
+  text-decoration: none;
 }
 
 #logo {
@@ -383,12 +384,15 @@ h5.card-title {
 
 .footer {
   width: 100%;
+  padding: 30px;
+  min-width: 300px;
+  min-height: 200px;
   /* height: 300px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 60px;
+  margin: auto 0;
 }
 
 .footer-links {
@@ -403,6 +407,12 @@ h5.card-title {
   text-transform: uppercase;
 }
 
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .social a {
   width: 40px;
   height: 40px;
@@ -512,6 +522,14 @@ h5.card-title {
 
   .card-columns .card {
     margin-bottom: 1rem;
+  }
+
+  .display-3 {
+    font-size: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
   }
 }
 

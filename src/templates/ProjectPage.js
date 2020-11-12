@@ -32,12 +32,12 @@ const ProjectPageTemplate = ({ data, pageContext }) => {
           <p className="text-mute">&lt;</p>
         )}
         {next ? (
-          <Link to={`/project/${next.slug}`}>
+          <Link to={`/project/${next.slug}`} className="text-right">
             {next.title}
             <span className="ml-3 text-decoration-none">&gt;</span>
           </Link>
         ) : (
-          <span className="text-muted">&gt;</span>
+          <span className="text-muted text-right">&gt;</span>
         )}
       </div>
       </div>
