@@ -48,8 +48,13 @@ a:hover {
   color: var(--primary-hover);
 }
 
+.wp-block-video {
+  justify-content: center;
+}
+
 video {
   object-fit: cover!important;
+  height: auto!important;
 }
 
 .wp-block-image img {
