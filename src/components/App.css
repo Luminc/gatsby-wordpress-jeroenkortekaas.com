@@ -48,6 +48,11 @@ a:hover {
   color: var(--primary-hover);
 }
 
+.wp-block-image img {
+  object-fit: cover!important;
+  height: auto!important;
+}
+
 .light {
   fill: var(--primary-dark) !important;
   color: var(--primary-dark) !important;
