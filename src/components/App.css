@@ -51,12 +51,13 @@ a:hover {
 .wp-block-video {
   width:100%;
   height:auto;
+  display:flex;
   justify-content: center;
 }
 
 .wp-block-video video {
   object-fit: cover!important;
-  width: 50%;
+  width: 90%;
 }
 
 .wp-block-image img {
@@ -567,13 +568,16 @@ h5.card-title {
   .card-columns {
     column-gap: 10rem;
   }
-  .wp-block-video {
+  .wp-block-video video{
     width:70%;
   }
 }
 
 /* XL */
 @media screen and (max-width: 1200px) {
+  .wp-block-video video{
+    width:50%;
+  }
 }
 
 .nav-active {
