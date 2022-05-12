@@ -48,6 +48,10 @@ a:hover {
   color: var(--primary-hover);
 }
 
+video {
+  object-fit: cover!important;
+}
+
 .wp-block-image img {
   object-fit: cover!important;
   height: auto!important;
