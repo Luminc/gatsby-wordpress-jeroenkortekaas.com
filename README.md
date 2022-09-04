@@ -1,1 +1,1 @@
-Gatsby & Wordpress Blog/Portfolio site starter
+Gatsby & Wordpress Blog/Portfolio
